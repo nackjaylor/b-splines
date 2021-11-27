@@ -21,6 +21,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "types.h"
 #include <algorithm>
 
+/**
+ * @brief Return closest index of a value in an nx1 Eigen vector
+ * 
+ * @param vector Vector to compare to
+ * @param candi Candidate value
+ * @return int Index
+ */
 int closest_floor_index(const VectorXd& vector, const double& candi) {
     VectorXd sorted_vector = vector;
     std::sort(sorted_vector.begin(),sorted_vector.end());
